@@ -5,9 +5,9 @@
         v-toolbar(flat dense class="cyan" dark)
           v-toolbar-title Register
         div(class="pl-4 pr-4 pt-2 pb-2")
-          input(type="email" name="email" v-model="email" placeholder="email")
+          v-text-field(v-model="email" label="Email" id="email")
           br
-          input(type="password" name="password" v-model="password" placeholder="password")
+          v-text-field(v-model="password" label="Password" id="password" type="password")
           br
           div(class="error" v-html="error")
           br
