@@ -1,7 +1,10 @@
 <template lang="pug">
   div(id="app")
-    page-header
-    router-view
+    v-app
+      page-header
+      main
+        v-container(fluid)
+          router-view
 </template>
 
 <script>
@@ -23,17 +26,5 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-}
-
-.input-group--text-field input {
-  border-bottom: 0.1em solid black;
-}
-
-.toolbar__title {
-  color: white;
-}
-
-.btn__content {
-  color: white;
 }
 </style>

@@ -11,7 +11,7 @@
           br
           div(class="error" v-html="error")
           br
-          v-btn(class="cyan" @click="register") Register
+          v-btn(class="cyan" @click="register" dark) Register
 </template>
 
 <script>
