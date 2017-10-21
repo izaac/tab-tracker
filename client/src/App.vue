@@ -1,13 +1,17 @@
-<template>
-  <div id="app">
-    <!-- <img src="./assets/logo.png"> -->
-    <router-view></router-view>
-  </div>
+<template lang="pug">
+  div(id="app")
+    page-header
+    router-view
 </template>
 
 <script>
+import PageHeader from '@/components/Header';
+
 export default {
   name: 'app',
+  components: {
+    PageHeader,
+  },
 };
 </script>
 
@@ -19,5 +23,17 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.input-group--text-field input {
+  border-bottom: 0.1em solid black;
+}
+
+.toolbar__title {
+  color: white;
+}
+
+.btn__content {
+  color: white;
 }
 </style>
