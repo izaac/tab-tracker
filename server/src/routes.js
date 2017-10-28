@@ -15,4 +15,10 @@ module.exports = (app) => {
     AuthenticationControllerPolicy.register,
     AuthenticationController.register,
   );
+
+  /* POST /login endpoint */
+  app.post(
+    '/login',
+    AuthenticationController.login,
+  );
 };
