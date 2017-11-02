@@ -36,7 +36,7 @@ module.exports = {
         });
       }
 
-      const isPasswordValid = password === user.password;
+      const isPasswordValid = await user.compassword(password);
       if (!isPasswordValid) {
         return res.status(403).send({
           error: 'The user information was incorrect.',
