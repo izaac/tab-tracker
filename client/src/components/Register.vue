@@ -5,13 +5,14 @@
         v-toolbar(flat dense class="cyan" dark)
           v-toolbar-title Register
         div(class="pl-4 pr-4 pt-2 pb-2")
-          v-text-field(v-model="email" label="Email" id="email")
-          br
-          v-text-field(v-model="password" label="Password" id="password" type="password")
-          br
-          div(class="error" v-html="error")
-          br
-          v-btn(class="cyan" @click="register" dark) Register
+          form(name="tab-tracker-form-register" autocomplete="off")
+            v-text-field(v-model="email" label="Email" id="email")
+            br
+            v-text-field(v-model="password" label="Password" id="password" type="password" autocomplete="new-password")
+            br
+            div(class="error" v-html="error")
+            br
+            v-btn(class="cyan" @click="register" dark) Register
 </template>
 
 <script>
