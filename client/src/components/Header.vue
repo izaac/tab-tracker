@@ -7,6 +7,8 @@
         v-btn(flat dark @click="navigateTo({name: 'Login'})") Login
       v-toolbar-items(v-if="!$store.state.isUserLoggedIn")
         v-btn(flat dark @click="navigateTo({name: 'Register'})") Sign Up
+      v-toolbar-items(v-if="$store.state.isUserLoggedIn")
+        v-btn(flat dark @click="logout") Log Out
 </template>
 
 <script>
@@ -14,6 +16,13 @@ export default {
   methods: {
     navigateTo(route) {
       this.$router.push(route);
+    },
+    logout() {
+      this.$store.dispatch('setToken', null);
+      this.$store.dispatch('setUser', null);
+      this.$router.push({
+        name: 'root',
+      });
     },
   },
 };
