@@ -2,6 +2,8 @@
     v-toolbar(fixed class="cyan" dark)
       v-toolbar-title(class="mr-4")
         span(class="home" @click="navigateTo({name: 'root'})") TabTracker
+      v-toolbar-items
+        v-btn(flat dark @click="navigateTo({name: 'Songs'})") Browse  
       v-spacer
       v-toolbar-items(v-if="!$store.state.isUserLoggedIn")
         v-btn(flat dark @click="navigateTo({name: 'Login'})") Login
