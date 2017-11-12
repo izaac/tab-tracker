@@ -17,18 +17,7 @@ export default {
   },
   data() {
     return {
-      songs: [
-        {
-          title: 'Float On',
-          artist: 'Modest Mouse',
-          album: 'Good News for People who Loves Bad News',
-        },
-        {
-          title: 'Float On',
-          artist: 'Modest Mouse',
-          album: 'Good News for People who Loves Bad News',
-        },
-      ],
+      songs: null,
     };
   },
 };
