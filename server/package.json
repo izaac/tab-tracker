@@ -17,11 +17,11 @@
     "cors": "^2.8.4",
     "eslint": "^4.11.0",
     "express": "^4.16.2",
-    "joi": "^11.4.0",
+    "joi": "^13.0.2",
     "jsonwebtoken": "^8.1.0",
     "morgan": "^1.9.0",
     "nodemon": "^1.12.1",
-    "sequelize": "^4.22.7",
+    "sequelize": "^4.22.8",
     "sqlite3": "^3.1.13"
   },
   "devDependencies": {
