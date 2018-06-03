@@ -22,8 +22,10 @@ module.exports = (sequelize, DataTypes) => {
     password: DataTypes.STRING,
   }, {
     hooks: {
-      beforeCreate: hashPassword,
-      beforeUpdate: hashPassword,
+      // Leaving beforeCreate and beforeUpdate hooks makes the hash twice.
+      // Solution: leave just the beforeSave hook.
+      // beforeCreate: hashPassword,
+      // beforeUpdate: hashPassword,
       beforeSave: hashPassword,
     },
   });
